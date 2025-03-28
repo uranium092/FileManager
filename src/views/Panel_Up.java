@@ -1,34 +1,34 @@
-package G_Interface;
+package views;
 import java.awt.event.*;
 
 import javax.swing.*;
 public class Panel_Up extends JPanel{
-	private JTextField input;
+	private JTextField fieldFilter;
 	private ButtonGroup group;
-	private JRadioButton filter,del;
+	private JRadioButton filter,delete;
 	Panel_Down down;
 	public Panel_Up() {
 		add(new JLabel("Ruta:"));
-		input=new JTextField(24);
-		Frame.setStyle(input);
+		fieldFilter=new JTextField(24);
+		Frame.setStyle(fieldFilter);
 		group=new ButtonGroup();
 		filter=new JRadioButton("Filtrar");
 		filter.setActionCommand("Filtrar");
 		filter.setSelected(true); 
-		del=new JRadioButton("Borrar");
-		del.setActionCommand("Borrar"); 
+		delete=new JRadioButton("Borrar");
+		delete.setActionCommand("Borrar"); 
 		group.add(filter);
-		group.add(del);
-		Frame.setStyle(del);
+		group.add(delete);
+		Frame.setStyle(delete);
 		Frame.setStyle(filter);
-		add(input);
+		add(fieldFilter);
 		add(filter);
-		add(del); 
+		add(delete); 
 	}
 	public JTextField getField() {
-		return input;
+		return fieldFilter;
 	}
 	public JRadioButton getRadio(int x) {
-		return x==0?filter:del; 
+		return x==0?filter:delete; 
 	}
 }

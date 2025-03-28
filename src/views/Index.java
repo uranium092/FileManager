@@ -1,10 +1,7 @@
-package G_Interface;
-
-import javax.swing.JFrame;
+package views;
 
 public class Index {
 	public static void main(String[] args) {
 		new Frame();
-		new FramePopup();
 	}
 } 

@@ -1,4 +1,4 @@
-package G_Interface;
+package views;
 
 import java.awt.*;
 import java.awt.Color;
@@ -8,14 +8,15 @@ import java.awt.event.*;
 import java.io.*;
 
 import javax.swing.*;
-import Brain.*;
+
+import services.*;
 public class Panel_Down extends JPanel{
 	private JButton filter=new JButton("Filtrar");
-	private JTextField Field;
-	private JTextArea Area;
+	private JTextField field;
+	private JTextArea infoArea;
 	public Panel_Down(JTextField e,JRadioButton b1,JRadioButton b2,JTextArea area,JFrame PopUp) {
-		Field=e;
-		Area=area;
+		field=e;
+		infoArea=area;
 		JTextField getPath=new JTextField(28); 
 		Frame.setStyle(getPath); 
 		JButton Open=new JButton("Abrir");
@@ -48,24 +49,24 @@ public class Panel_Down extends JPanel{
 		filter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent o) {
 				area.setText("");
-				File file=new File(Field.getText());
+				File file=new File(field.getText());
 				if(filter.getActionCommand().equals("Borrar")) {
 					PopUp.setVisible(false);
-					if(file.exists()==false) FalseM(new Color(115,115,115),"Ruta inexistente"); 
+					if(file.exists()==false) setMessageInfoArea(new Color(115,115,115),"Ruta inexistente"); 
 					else {
-						FalseM(Color.black,"Ok."); 
+						setMessageInfoArea(Color.black,"Ok."); 
 						if(file.isDirectory()) {
-							Come_On.Kernel(true,file,null,"");
+							FileManager.executeFileOperation(true,file,null,"");
 						}else {
 							file.delete();
 						}
 					}
 				}else {
-					if(file.exists()==false||file.isDirectory()==false) FalseM(new Color(115,115,115),"-ERROR- Ruta inexistente, y/o hay fichero en vez de directorio...");
+					if(file.exists()==false||file.isDirectory()==false) setMessageInfoArea(new Color(115,115,115),"-ERROR- Ruta inexistente, y/o hay fichero en vez de directorio...");
 					else {
-						Field.setBackground(Color.black);
-						area.setText("<root> "+file.getName()+"\n\n");
-						Come_On.Kernel(false,file,Area,"");
+						field.setBackground(Color.black);
+						area.setText("<root> "+file.getName()+"\n.\n");
+						FileManager.executeFileOperation(false,file,infoArea,"");
 					}
 					if(file.exists()) {
 						getPath.setText(file.getAbsolutePath());
@@ -79,17 +80,17 @@ public class Panel_Down extends JPanel{
 		Frame.setStyle(clear);
 		Frame.setStyle(filter);
 	}
-	private void FalseM(Color i,String o) {
-		Field.setBackground(i);
-		Area.setText(o); 
+	private void setMessageInfoArea(Color color,String text) {
+		field.setBackground(color);
+		infoArea.setText(text); 
 	}
 	private class Listener implements ActionListener{
-		private String x;
-		public Listener(String x) {
-			this.x=x;
+		private String textButon;
+		public Listener(String textButon) {
+			this.textButon=textButon;
 		}
 		public void actionPerformed(ActionEvent e) {
-			filter.setText(x); 
+			filter.setText(textButon); 
 		}
 		
 	}

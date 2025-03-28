@@ -1,4 +1,4 @@
-package G_Interface;
+package views;
 
 import java.awt.Color;
 
@@ -8,7 +8,7 @@ public class Frame extends JFrame{
 	public Frame() {
 		setBounds(200,100,480,330);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		add(new Component_dad(new FramePopup()));  
+		add(new ViewContainer(new FramePopup()));  
 		setVisible(true); 
 	}
 	public static void setStyle(JComponent e) {

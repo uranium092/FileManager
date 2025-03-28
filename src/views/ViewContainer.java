@@ -1,11 +1,11 @@
-package G_Interface;
+package views;
 
 import java.awt.*;
 
 import javax.swing.*;
 
-public class Component_dad extends JPanel{
-	public Component_dad(JFrame Popup){ 
+public class ViewContainer extends JPanel{
+	public ViewContainer(JFrame Popup){ 
 		setLayout(new BorderLayout());
 		add(new JPanel(),BorderLayout.WEST);
 		add(new JPanel(),BorderLayout.EAST);
