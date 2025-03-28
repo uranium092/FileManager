@@ -29,9 +29,10 @@ Aplicación de gestión de archivos integrada al sistema operativo. Permite la n
     ```bash
     git clone https://github.com/uranium092/FileManager
     ```
-2. **Ir al ejecutable `.jar`:** Navega a `executable` y ejecuta `FileManager.jar` dando click sobre él o ejecutando `javar -jar FileManager.jar`
+2. **Ir al ejecutable `.jar`:** Navega a `executable` y ejecuta `FileManager.jar` dando click sobre él o ejecutando `java -jar FileManager.jar`
 
 ## Recomendaciones
-* Si lo llega a probar, Asegúrese que `Server.jar` esté antes en ejecución que `Client.jar`
-* Este chat está diseñado para funcionar en la misma máquina, por lo que los usuarios deben estar en el mismo entorno local.
-* La interfaz de usuario es simple y directa, enfocada en la funcionalidad principal de la conversación.
+## Recomendaciones
+
+* **Precaución al eliminar:** Tenga especial cuidado al utilizar la función de eliminación. Los archivos borrados no se pueden recuperar, ya que la aplicación no realiza copias de seguridad ni utiliza una papelera de reciclaje.
+* **Filtrado en directorios grandes:** Evite utilizar la función de filtrado en directorios con una gran cantidad de archivos y subdirectorios. Esto podría afectar el rendimiento.
