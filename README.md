@@ -32,7 +32,7 @@ Aplicación de gestión de archivos integrada al sistema operativo. Permite la n
 2. **Ir al ejecutable `.jar`:** Navega a `executable` y ejecuta `FileManager.jar` dando click sobre él o ejecutando `java -jar FileManager.jar`
 
 ## Recomendaciones
-## Recomendaciones
 
-* **Precaución al eliminar:** Tenga especial cuidado al utilizar la función de eliminación. Los archivos borrados no se pueden recuperar, ya que la aplicación no realiza copias de seguridad ni utiliza una papelera de reciclaje.
+* **Precaución al eliminar:** Tenga cuidado con la eliminación. Los archivos borrados no se pueden recuperar.
+  
 * **Filtrado en directorios grandes:** Evite utilizar la función de filtrado en directorios con una gran cantidad de archivos y subdirectorios. Esto podría afectar el rendimiento.
