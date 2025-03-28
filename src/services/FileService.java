@@ -4,7 +4,7 @@ import java.io.*;
 
 import javax.swing.*;
 
-public class FileManager {
+public class FileService {
 	public static void executeFileOperation(boolean isDelete,File file, JTextArea area,String identationLevel){
 		for(String filePath:file.list()) {
 			if(new File(file.getAbsolutePath()+"/"+filePath).isDirectory()) {

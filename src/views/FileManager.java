@@ -1,6 +1,6 @@
 package views;
 
-public class Index {
+public class FileManager {
 	public static void main(String[] args) {
 		new Frame();
 	}

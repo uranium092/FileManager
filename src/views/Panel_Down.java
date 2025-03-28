@@ -56,7 +56,7 @@ public class Panel_Down extends JPanel{
 					else {
 						setMessageInfoArea(Color.black,"Ok."); 
 						if(file.isDirectory()) {
-							FileManager.executeFileOperation(true,file,null,"");
+							FileService.executeFileOperation(true,file,null,"");
 						}else {
 							file.delete();
 						}
@@ -66,7 +66,7 @@ public class Panel_Down extends JPanel{
 					else {
 						field.setBackground(Color.black);
 						area.setText("<root> "+file.getName()+"\n.\n");
-						FileManager.executeFileOperation(false,file,infoArea,"");
+						FileService.executeFileOperation(false,file,infoArea,"");
 					}
 					if(file.exists()) {
 						getPath.setText(file.getAbsolutePath());
