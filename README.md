@@ -1,6 +1,6 @@
 # Gestor de Archivos Integrado (FileManager)
 
-Aplicación de gestión de archivos integrada al sistema operativo. Permite la navegación y manipulación de archivos y directorios, incluyendo listado recursivo, reconocimiento de extensiones, operaciones de visualización, eliminación recursiva, y apertura de archivos/directorios filtrados.
+Programa de gestión de archivos integrada al sistema operativo. Permite la navegación y manipulación de archivos y directorios, incluyendo listado recursivo, reconocimiento de extensiones, operaciones de visualización, eliminación recursiva, y apertura de archivos/directorios filtrados.
 
 **Tecnologías Utilizadas:** Java, Swing.
 
