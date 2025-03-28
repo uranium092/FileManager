@@ -9,7 +9,7 @@ Aplicación de gestión de archivos integrada al sistema operativo. Permite la n
 * **Exploración de rutas:**
     * Permite ingresar una ruta en el sistema para explorar su contenido.
 * **Filtrado de archivos:**
-    * Implementa un sistema de filtrado de archivos similar al comando `ls` en Linux, mostrando subdirectorios y archivos de forma estructurada.
+    * Implementa el filtrado de archivos similar al comando `ls` en Linux, mostrando subdirectorios y archivos de forma estructurada.
 * **Eliminación de elementos:**
     * Permite la eliminación de archivos y directorios.
     * Si se elimina un directorio, se elimina de forma recursiva (contenido y directorio).
